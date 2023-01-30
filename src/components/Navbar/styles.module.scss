@@ -1,0 +1,118 @@
+.navbar-container {
+  block-size: 5rem;
+  inline-size: 100%;
+  position: fixed;
+  transition: all 300ms;
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    block-size: 100%;
+    padding-inline: 2rem;
+
+    .primary-navigation {
+      display: flex;
+
+      & a {
+        display: flex;
+      }
+
+      .primary-navigation-logo {
+        inline-size: 8.4rem;
+      }
+
+      .primary-navigation-list {
+        display: none;
+      }
+    }
+
+    .secondary-navigation {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+
+      .secondary-navigation-icons {
+        display: flex;
+        gap: 1.8rem;
+
+        & svg {
+          cursor: pointer;
+        }
+      }
+
+      .secondary-navigation-avatar {
+        inline-size: 3.2rem;
+        block-size: 3.2rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.navbar-container-bg {
+  background-color: #141414;
+  transition: all 300ms;
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    .navbar-nav {
+      padding-inline: 3rem;
+
+      .primary-navigation {
+        .primary-navigation-logo {
+          margin-inline-end: 2.8rem;
+        }
+
+        .primary-navigation-list {
+          display: flex;
+          align-items: center;
+          gap: 1.8rem;
+          color: #e5e5e5;
+          font: 500 1.2rem/1 'Helvetica Neue', sans-serif;
+
+          & li {
+            cursor: pointer;
+            transition: color 400ms;
+          }
+
+          & li:not(.active):hover {
+            color: #b3b3b3;
+          }
+
+          & .active {
+            color: #fff;
+            font-weight: 700;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .navbar-container {
+    block-size: 6.8rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .navbar-container {
+    .navbar-nav {
+      padding-inline: 6rem;
+
+      .primary-navigation {
+        .primary-navigation-logo {
+          margin-inline-end: 4.5rem;
+        }
+
+        .primary-navigation-list {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
